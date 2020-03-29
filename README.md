@@ -1,3 +1,33 @@
+## Reading Material
+
+### RxJS - Best reading article <br/>
+
+https://xgrommx.github.io/rx-book/content/guidelines/introduction/index.html <br/>
+<br/>
+
+### Learn - RxJS - wikipedia search (working) <br/>
+
+https://jsfiddle.net/q8Ljo4y1/7/ <br/>
+<br/>
+
+### Learn - RxJS - Twitter follow recommendations (working) <br/>
+
+http://jsfiddle.net/staltz/8jFJH/48/ <br/>
+<br/>
+
+### Learn - RxJS - Reading Material on RxJS <br/>
+
+https://gist.github.com/staltz/868e7e9bc2a7b8c1f754 <br/>
+<br/>
+
+### Working Example (stock ticker)
+
+https://dev.to/netguru/handling-financial-data-using-react-and-rxjs-based-methods-with-redux-observable-and-websockets-3nm9 <br/>
+https://github.com/Ressvieth/RxJSReact <br/>
+<br/>
+Finnhub API Key
+bo7i4hnrh5rdgpjsbq0g
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
