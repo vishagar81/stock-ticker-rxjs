@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import { Provider } from 'react-redux'
+import {createStore, applyMiddleware } from 'redux'
+import { createEpicMiddleware, combineEpics } from 'redux-observable'
+
+import * as actions from './actions'
+import reducer from './reducer'
+
+import Repositories from './Repositories'
 import './App.css';
+
+const epicMiddleware = createEpicMiddleware();
+const store = createStore(
+  reducer,
+  { isLoading: false, isError: false, repositories: [] },
+  applyMiddleware(epicMiddleware)
+);
+
+const rootEpic = combineEpics(actions.stockDataEpic);
+epicMiddleware.run(rootEpic); 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Repositories />
+      </div>
+    </Provider>
   );
 }
 
